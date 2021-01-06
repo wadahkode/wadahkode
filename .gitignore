@@ -1,5 +1,5 @@
 app.backup
-#build
+build
 node_modules
 src/config/firebase.ts
 public/js/*
