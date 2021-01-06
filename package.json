@@ -8,11 +8,11 @@
     "src": "src"
   },
   "scripts": {
-    "buildjs": "webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js",
     "devjs": "webpack --watch --config webpack.dev.js",
     "devts": "tsc -w",
-    "serve": "nodemon ./build/server.js",
-    "servejs": "node ./build/server.js",
+    "serve": "node ./build/server.js",
+    "servejs": "nodemon ./build/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
