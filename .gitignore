@@ -2,5 +2,7 @@ app.backup
 build
 node_modules
 src/config/firebase.ts
+public/js/*
+!.gitkeep
 public/videos/*
 !.gitkeep
