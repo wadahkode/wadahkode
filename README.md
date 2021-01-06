@@ -1,8 +1,8 @@
 ### Hi there 👋
 
-<p>
+<!--p>
     <img src="https://komarev.com/ghpvc/?username=wadahkode&label=Profile%20views&color=0e75b6&style=flat"/>
-</p>
+</p-->
 
 Saya hanya ingin bilang, semoga isi dari repositori saya dapat bermanfaat untuk anda.
 Salam koding, terus berkarya.
