@@ -6,7 +6,7 @@ auth();
 
 Route.group('/', function(){
   Route.get('index.html', function(){
-    let container: any = document.getElementById('root')
+    let container = document.getElementById('root')
     container.innerHTML = 'Selamat datang di wadahgamer'
   });
   
