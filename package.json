@@ -12,7 +12,7 @@
     "devjs": "webpack --watch --config webpack.dev.js",
     "devts": "tsc -w",
     "serve": "nodemon ./build/server.js",
-    "servejs": "npm install && tsc && npm run buildjs && npm run serve",
+    "servejs": "node ./build/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
