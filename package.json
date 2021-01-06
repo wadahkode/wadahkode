@@ -8,7 +8,7 @@
     "src": "src"
   },
   "scripts": {
-    "build": "tsc && webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js",
     "devjs": "webpack --watch --config webpack.dev.js",
     "devts": "tsc -w",
     "serve": "node ./build/server.js",
