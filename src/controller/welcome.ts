@@ -1,6 +1,8 @@
 require('jsdom-global')();
 
 class Welcome {
+  public container: any;
+  
   constructor() {
     this.container = document.getElementById('root')
   }

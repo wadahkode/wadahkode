@@ -1,9 +1,9 @@
 const Route = require('../router');
-const Welcome = require('../controller/welcome')();
+const welcome = require('../controller/welcome')();
 
 Route.group('/', function(){
   Route.get('index.html', function(){
-    Welcome.index();
+    welcome.index();
   });
   
   Route.get('login', 'login');
