@@ -1,13 +1,9 @@
 const Route = require('../router');
-const auth = require('../authenticated');
-require('jsdom-global')();
-
-auth();
+const Welcome = require('../controller/welcome')();
 
 Route.group('/', function(){
   Route.get('index.html', function(){
-    let container = document.getElementById('root')
-    container.innerHTML = 'Selamat datang di wadahgamer'
+    Welcome.index();
   });
   
   Route.get('login', 'login');
