@@ -8,11 +8,12 @@
     "src": "src"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=12",
+    "npm": ">=6"
   },
   "scripts": {
     "tsc": "tsc",
-    "build": "webpack --config webpack.prod.js",
+    "build": "npm run tsc && webpack --config webpack.prod.js",
     "devjs": "webpack --watch --config webpack.dev.js",
     "devts": "tsc -w",
     "postInstall": "npm run tsc",
