@@ -13,8 +13,8 @@
     "devjs": "webpack --watch --config webpack.dev.js",
     "devts": "tsc -w",
     "postInstall": "tsc",
-    "serve": "node ./build/server.js",
-    "servejs": "nodemon ./build/server.js",
+    "serve": "node ./server.js",
+    "servejs": "nodemon ./server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
