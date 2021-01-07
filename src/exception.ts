@@ -12,18 +12,18 @@ class Exception {
       modal = document.createElement('div');
       
     el.className = 'debug btn btn-primary';
-    el.setAttribute('data-toggle','modal');
-    el.setAttribute('data-target','#debuging');
-    el.innerHTML = 'debug';
+    el.setAttribute('data-bs-toggle','modal');
+    el.setAttribute('data-bs-target','#debuging');
+    el.innerHTML = 'live debug';
     modal.className = 'modal fade';
     modal.id = 'debuging';
     modal.innerHTML = `
-      <div class="modal-dialog">
+      <div class="modal-dialog" tabindex="-1" aria-labelledby="debuging" aria-hidden="true">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">WARNING <span class="text-danger">(!)</span></h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+            <button type="button" class="btn btn-close close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"></span>
             </button>
           </div>
           <div class="modal-body">

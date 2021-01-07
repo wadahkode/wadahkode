@@ -1,15 +1,15 @@
+let BaseController = require('./controller');
 require('jsdom-global')();
 
-class Welcome {
-  public container: any;
-  
-  constructor() {
-    this.container = document.getElementById('root')
+class Welcome extends BaseController {
+  constructor(prop: any) {
+    super(prop);
   }
   
   index() {
-    this.container.innerHTML = 'Welcome'
+    super.view('Welcome');
+    //this.container.innerHTML = 'Welcome'
   }
 }
 
-module.exports = () => new Welcome;
+module.exports = () => new Welcome(document.getElementById('root'));

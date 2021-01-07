@@ -120,7 +120,7 @@ class WadahkodeTest {
           if (snap.val() === true) {
             callback(true);
           }
-        }, 20);
+        }, 10);
       });
   }
 }
