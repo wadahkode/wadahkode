@@ -7,6 +7,10 @@
     "build": "build",
     "src": "src"
   },
+  "engines": {
+    "node": "12.18.3",
+    "npm": "6.14.10"
+  },
   "scripts": {
     "tsc": "tsc",
     "build": "npm run tsc && webpack --config webpack.prod.js",
