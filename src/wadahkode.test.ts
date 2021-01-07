@@ -59,12 +59,11 @@ class WadahkodeTest {
     if (this.splashscreen) {
       this.getSplashScreen();
     }
+    require('./routes/web');
     
     this.testFirebaseConnected((status: boolean) => {
       try {
         if (!status) return this.exception('Layanan firebase tidak dapat terhubung, koneksi internet anda mungkin terlalu lambat!');
-        
-        require('./routes/web');
       } catch (e) {
         this.exception(e.message, e.fileName, e.lineNumber);
       }
@@ -76,7 +75,7 @@ class WadahkodeTest {
       this.container.style.background = "#fff";
       this.container.innerHTML = `
         <div class="splashscreen">
-          <div class="brand text-light">Wadahkode</div>
+          <div class="brand text-light">Wadahgamer</div>
           <div class="loading">
             <div class="dot"></div>
             <div class="dot"></div>
@@ -120,7 +119,7 @@ class WadahkodeTest {
           if (snap.val() === true) {
             callback(true);
           }
-        }, 10);
+        }, 1000);
       });
   }
 }
