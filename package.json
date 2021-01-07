@@ -7,10 +7,6 @@
     "build": "build",
     "src": "src"
   },
-  "engines": {
-    "node": ">=12",
-    "npm": ">=6"
-  },
   "scripts": {
     "tsc": "tsc",
     "build": "npm run tsc && webpack --config webpack.prod.js",
