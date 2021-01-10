@@ -13,7 +13,6 @@ app.get('/', (req, res) => {
     new Date(),
     req.url
   );
-  
   res.render('index', {title: 'Welcome | Wadahgamer'});
 });
 app.listen(port);
