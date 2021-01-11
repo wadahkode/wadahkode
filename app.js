@@ -32,7 +32,8 @@ app.get('/about', (req, res) => {
   );
   
   res.render('about', {
-    title: 'Wadahgamer | Tentang kami'
+    title: 'Wadahgamer',
+    description: 'Tentang kami'
   });
 });
 
