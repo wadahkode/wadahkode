@@ -14,9 +14,10 @@ app.get('/', (req, res) => {
     new Date(),
     req.url
   );
+  
   res.render('index', {
-    title: 'Welcome | Wadahgamer',
-    SITE_URL: '/'
+    title: 'Wadahgamer',
+    description: 'Selamat datang'
   });
 });
 
@@ -31,8 +32,7 @@ app.get('/about', (req, res) => {
   );
   
   res.render('about', {
-    title: 'Wadahgamer | Tentang kami',
-    SITE_URL: '/'
+    title: 'Wadahgamer | Tentang kami'
   });
 });
 

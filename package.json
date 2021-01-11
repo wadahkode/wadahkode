@@ -31,6 +31,6 @@
     "ejs": "^3.1.5"
   },
   "dependencies": {
-    "@wadahkode/server": "^1.0.7"
+    "@wadahkode/server": "^1.0.8"
   }
 }
