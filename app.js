@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
     req.url
   );
   
-  if (session.has('id')) {
+  if (session.has('normalId')) {
     res.redirect('home');
     res.end();
   } else {
