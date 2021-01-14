@@ -28,9 +28,10 @@
   },
   "homepage": "https://github.com/wadahkode/wadahkode#readme",
   "devDependencies": {
-    "ejs": "^3.1.5"
+    "ejs": "^3.1.5",
+    "pg": "^8.5.1"
   },
   "dependencies": {
-    "@wadahkode/server": "^1.1.1"
+    "@wadahkode/server": "^1.1.2"
   }
 }
