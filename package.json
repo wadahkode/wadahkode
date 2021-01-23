@@ -11,6 +11,7 @@
     "npm": "6.14.10"
   },
   "scripts": {
+    "start": "nodemon ./app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,10 +29,9 @@
   },
   "homepage": "https://github.com/wadahkode/wadahkode#readme",
   "devDependencies": {
-    "ejs": "^3.1.5",
     "pg": "^8.5.1"
   },
   "dependencies": {
-    "@wadahkode/server": "^1.1.2"
+    "@wadahkode/server": "^1.1.5-rc1"
   }
 }

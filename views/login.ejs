@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%= description %> | <%= title %></title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="css/style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+  <%- include('partials/head') %>
+  
+  <main class="cover container pt-5 mt-3">
+    <div class="mt-5">
+      <h1>Login</h1>
+      <form>
+        <div class="form-group">
+          <input type="email" class="form-control" id="email" name="email" placeholder="masukan email anda"/>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" id="password" name="password" placeholder="kata sandi"/>
+        </div>
+        <div class="form-group mt-3">
+          <button type="submit" class="btn btn-primary w-100">masuk</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  
+  <%- include('partials/footer') %>
+</body>
+</html>

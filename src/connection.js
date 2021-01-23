@@ -1,25 +1,9 @@
-
-class Connection {
-  constructor() {
-    // const {Client, Pool} = require(type);
-    // return new Pool({
-    //   user: 'root',
-    //   host: 'localhost',
-    //   database: database,
-    //   password: '',
-    //   port: 5432
-    // });
-    // this.client = new Client({
-    //   connectionString: process.env.DATABASE_URL,
-    //   ssl: {
-    //     rejectUnauthorized: false,
-    //     sslmode: require
-    //   }
-    // });
-    // this.client.connect();
-  }
-}
-
+/**
+ * Koneksi
+ * 
+ * @author wadahkode <mvp.dedefilaras@gmail.com>
+ * @since version 1.0.0
+ */
 module.exports = class {
   constructor(module) {
     this.connect = require(module);
