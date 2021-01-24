@@ -21,3 +21,28 @@
   padding-bottom: .75rem;
   font-size: .875rem;
 }
+
+.hero-jumbotron.number-1 {
+  background-image: url(../img/fanny.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+.hero-jumbotron.number-2 {
+  background-image: url(../img/kagura.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.animation-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}

@@ -1,8 +1,13 @@
 const wadahkode = require('@wadahkode/server'),
   Router = wadahkode().Router,
-  session = require('@wadahkode/server/lib/v2/session')();
+  Client = wadahkode().Client,
+  session = require('@wadahkode/server/lib/session')(),
+  passwordHash = require('@wadahkode/password-hash');
 
 session.start();
+Client.initialize({
+  path: wadahkode().dirname('/') + '.env',
+});
 
 Router.get('/', (req, res) => res.render('index', {
   title: 'Wadahgamer',

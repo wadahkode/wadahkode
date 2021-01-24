@@ -32,6 +32,6 @@
     "pg": "^8.5.1"
   },
   "dependencies": {
-    "@wadahkode/server": "^1.1.5-rc1"
+    "@wadahkode/server": "^1.1.6"
   }
 }

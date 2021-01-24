@@ -3,5 +3,6 @@ build
 node_modules
 #src/config/firebase.ts
 backup
+.env
 public/videos/*
 !.gitkeep
