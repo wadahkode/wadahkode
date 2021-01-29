@@ -1,48 +1,64 @@
-.nav-scroller {
-  position: relative;
-  z-index: 2;
-  height: 2.75rem;
-  overflow-y: hidden;
+/**
+ * Custom your stylesheet
+ *
+ */
+/*body, h1, h2, h3, h4, h5, h6, ul {
+  margin: 0;
+  padding: 0;
 }
-
-.nav-scroller .nav {
+nav {
   display: flex;
-  flex-wrap: nowrap;
-  padding-bottom: 1rem;
-  margin-top: -1px;
-  overflow-x: auto;
-  text-align: center;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
+}
+nav .container {
+  display: flex;
+  flex: 1 1;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 7px;
+}
+nav .container .to-left {
+  flex: 1;
+  justify-content: flex-start;
+}
+nav .container .to-left .brand {
+  font-size: 18pt;
+  padding: 7px;
+}
+nav .container .to-right {
+  flex: 1;
+  justify-content: flex-end;
+}
+nav .container .to-right ul {
+  display: flex;
+  list-style: none;
+}
+nav .container .to-right ul li {
+  padding: 7px;
+}
+a {
+  text-decoration: none;
+}
+main {
+  padding: 0 7px;
+}
+.mt-3 {
+  margin-top: 12px;
+}*/
+.tox-edit-area {
+  min-height: 200px;
+  max-height: 200px;
 }
 
-.nav-scroller .nav-link {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  font-size: .875rem;
+.tox.tox-tinymce .tox-statusbar,
+.tox.tox-tinymce .tox-statusbar .tox-statusbar__resize-handle,
+.tox.tox-tinymce .tox-statusbar .tox-statusbar__branding {
+  display: none;
 }
 
-.hero-jumbotron.number-1 {
-  background-image: url(../img/fanny.png);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
-}
-.hero-jumbotron.number-2 {
-  background-image: url(../img/kagura.png);
-  background-repeat: no-repeat;
-  background-position: bottom right;
+.article .after {
+  display: none;
 }
 
-.animation-pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: .5;
-  }
+.article .before.hidden {
+  display: none;
 }
