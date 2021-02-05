@@ -3,7 +3,7 @@ build
 node_modules
 #src/config/firebase.ts
 backup
-.env
+#.env
 public/videos/*
 public.backup
 routes.backup
