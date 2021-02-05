@@ -11,7 +11,7 @@
     "npm": "6.14.10"
   },
   "scripts": {
-    "start": "nodemon ./app",
+    "start": "nodemon ./app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -32,6 +32,8 @@
     "pg": "^8.5.1"
   },
   "dependencies": {
-    "@wadahkode/server": "^1.1.6"
+    "@wadahkode/memories": "^1.1.6",
+    "@wadahkode/password-hash": "^1.1.2",
+    "@wadahkode/server": "^1.2.0"
   }
 }
