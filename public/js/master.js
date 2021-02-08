@@ -1,39 +1,44 @@
-let container = document.querySelector('main');
-let username = document.querySelector('.session-username');
+let container = document.querySelector("main");
+let username = document.querySelector(".session-username");
 let sideUrl = [
   {
     admin: {
-      tutorial: 'admin-tutorial'
-    }
-  }
+      tutorial: "admin-tutorial",
+    },
+  },
 ];
 
-sideUrl.forEach(url => {
-  let item = document.querySelector('.' + url.admin.tutorial);
+sideUrl.forEach((url) => {
+  let item = document.querySelector("." + url.admin.tutorial);
 
-  item.querySelector('button').onclick = () => {
-    container.innerHTML = formTutorial('/' + url.admin.tutorial.replace('-', '/'));
+  item.querySelector("button").onclick = () => {
+    container.innerHTML = formTutorial(
+      "/" + url.admin.tutorial.replace("-", "/")
+    );
     tinymce.init({
-      selector: '#editor',
+      selector: "#editor",
       height: 300,
-      plugins: 'autolink image table paste preview lists nonbreaking code emoticons',
+      plugins:
+        "autolink image table paste preview lists nonbreaking code emoticons",
       nonbreaking_force_tab: true,
-      toolbar: 'undo redo | styleselect | bold italic | ' +
-        'alignleft aligncenter alignright alignjustify | ' +
-        'outdent indent | numlist bullist | emoticons',
+      toolbar:
+        "undo redo | styleselect | bold italic | " +
+        "alignleft aligncenter alignright alignjustify | " +
+        "outdent indent | numlist bullist | emoticons",
       emoticons_append: {
         custom_mind_explode: {
-          keywords: ['brain', 'mind', 'explode', 'blown'],
-          char: '🤯'
-        }
+          keywords: ["brain", "mind", "explode", "blown"],
+          char: "🤯",
+        },
       },
-      content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
-      tinycomments_author: 'wadahkode official',
+      content_style:
+        "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+      tinycomments_author: "wadahkode official",
     });
   };
 });
 
-const formTutorial = url => /*html*/`
+const formTutorial = (url) => /*html*/ `
   <h1 class="text-lg font-bold mb-3">Buat tutorial</h1>
   <form action="${url}" class="bg-gray-100 border py-2 px-3" method="POST">
     <div>
@@ -48,7 +53,7 @@ const formTutorial = url => /*html*/`
         <option value="programing">Programing</option>
       </select>
     </div>
-    <div id="editor" name="editor" class="mt-3"></div>
+    <div id="editor" name="editor" class="mt-3 z-10"></div>
     <div class="mt-3">
       <legend>Penulis</legend>
       <input type="text" name="penulis" class="border rounded px-4 py-2 d-none" value="${username.innerHTML}"/>
@@ -59,30 +64,41 @@ const formTutorial = url => /*html*/`
   </form>
 `;
 
-if (container.hasChildNodes('.editor')) {
+if (container.hasChildNodes(".editor")) {
   // alert(true)
   tinymce.init({
-    selector: '#editor',
+    selector: "#editor",
     height: 300,
-    plugins: 'autolink image table paste preview lists nonbreaking code emoticons',
+    plugins:
+      "autolink image table paste preview lists nonbreaking code emoticons",
     nonbreaking_force_tab: true,
-    toolbar: 'undo redo | styleselect | bold italic | ' +
-      'alignleft aligncenter alignright alignjustify | ' +
-      'outdent indent | numlist bullist | emoticons',
+    toolbar:
+      "undo redo | styleselect | bold italic | " +
+      "alignleft aligncenter alignright alignjustify | " +
+      "outdent indent | numlist bullist | emoticons",
     emoticons_append: {
       custom_mind_explode: {
-        keywords: ['brain', 'mind', 'explode', 'blown'],
-        char: '🤯'
-      }
+        keywords: ["brain", "mind", "explode", "blown"],
+        char: "🤯",
+      },
     },
-    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
-    tinycomments_author: 'wadahkode official',
+    content_style:
+      "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+    tinycomments_author: "wadahkode official",
   });
 }
 
-const removeTag = document.querySelectorAll('.remove-tag');
-removeTag.forEach(tag => {
+const removeTag = document.querySelectorAll(".remove-tag");
+removeTag.forEach((tag) => {
   let text = tag.innerText;
 
   tag.innerHTML = text;
-})
+});
+
+// sembunyikan alert secara otomatis setelah 3 detik
+setTimeout(() => {
+  let alert = container.querySelector(".alert");
+  if (alert !== null) {
+    alert.style.display = "none";
+  }
+}, 3000);

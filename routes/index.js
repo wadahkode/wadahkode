@@ -259,6 +259,7 @@ Router.get("/admin/tutorial/edit/:judul", (req, res) => {
             title: "Blog",
             description: "Administrator",
             data: snapshot,
+            username: session.get("superuser"),
           });
         }
       })

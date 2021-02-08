@@ -1,5 +1,9 @@
 const wadahkode = require("@wadahkode/server"),
-  Client = wadahkode().Client;
+  Client = wadahkode().Client,
+  // Matikan ssl ketika berada dilocalhost
+  // sslOptions = false;
+  // Hapus komentar ini jika telah berada dihosting
+  sslOptions = { rejectUnauthorized: false };
 
 /**
  * Initialize environment
@@ -10,16 +14,11 @@ const wadahkode = require("@wadahkode/server"),
  * @since version 1.1.6
  */
 Client.initialize({
-  path: wadahkode().dirname(".") + "/.env",
+  path: wadahkode().dirname(".") + "/.env.example",
 });
 
 // Menyimpan pada variabel Database ketika terkoneksi
-const Database = Client.connect(
-  // Matikan ssl ketika berada dilocalhost
-  // (ssl = false)
-  // Hapus komentar ini jika telah berada dihosting
-  (ssl = { rejectUnauthorized: false })
-);
+const Database = Client.connect(sslOptions);
 
 // Berapa banyak model yang mau dimuat
 const userModel = require("./User")(Database);
