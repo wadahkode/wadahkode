@@ -32,7 +32,7 @@
     "pg": "^8.5.1"
   },
   "dependencies": {
-    "@wadahkode/memories": "^1.1.6",
+    "@wadahkode/memories": "^1.1.8",
     "@wadahkode/password-hash": "^1.1.2",
     "@wadahkode/server": "^1.2.0"
   }

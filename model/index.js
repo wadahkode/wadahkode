@@ -14,7 +14,7 @@ const wadahkode = require("@wadahkode/server"),
  * @since version 1.1.6
  */
 Client.initialize({
-  path: wadahkode().dirname(".") + "/.env.example",
+  path: wadahkode().dirname(".") + "/.env",
 });
 
 // Menyimpan pada variabel Database ketika terkoneksi
