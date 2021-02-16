@@ -422,17 +422,79 @@ Router.post("/admin/tutorial/update", (req, res) => {
 });
 
 // RESTApi for client
-Router.get("/api/users", (req, res) => {
-  Model.user.findAll("users").then((snapshot) => {
-    res
-      .writeHead(res.statusCode, {
-        Accept: "*",
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/json",
-        "Content-Length": Buffer.byteLength(JSON.stringify(snapshot)),
-      })
-      .end(JSON.stringify(snapshot));
-  });
+Router.post("/api/users/signin", (req, res) => {
+  const { username, password } = req.body;
+
+  return model.user
+    .findById("users", [username])
+    .then((snapshot) => {
+      if (snapshot < 1) {
+        res.writeHead(203, {
+          Accept: "*/*",
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        });
+        res.write(
+          JSON.stringify({
+            error: true,
+            errorCode: 203,
+            message: "Akun tidak dapat ditemukan!",
+          })
+        );
+        res.end();
+      }
+
+      for (let user of snapshot) {
+        if (!passwordHash.verify(password, JSON.parse(user.password))) {
+          res.writeHead(203, {
+            Accept: "*/*",
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          });
+          res.write(
+            JSON.stringify({
+              error: true,
+              errorCode: 203,
+              message: "Kata sandi salah!",
+            })
+          );
+          res.end();
+        } else {
+          res.writeHead(200, {
+            Accept: "*/*",
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          });
+          res.write(JSON.stringify(snapshot));
+          res.end();
+        }
+      }
+    })
+    .catch((error) => console.log(error));
+});
+
+Router.get("/api/users/:username", (req, res) => {
+  const { username } = req.body;
+
+  Model.user
+    .findById("users", [decodeURI(username), 0])
+    .then((snapshot) => {
+      if (snapshot.length < 1) {
+        res.end("Data tidak dapat ditemukan!");
+      } else {
+        res
+          .writeHead(res.statusCode, {
+            Accept: "*",
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+            "Content-Length": Buffer.byteLength(JSON.stringify(snapshot)),
+          })
+          .end(JSON.stringify(snapshot));
+      }
+    })
+    .catch((error) => {
+      if (error) res.end("error");
+    });
 });
 
 module.exports = Router;
