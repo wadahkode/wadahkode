@@ -421,4 +421,18 @@ Router.post("/admin/tutorial/update", (req, res) => {
   }
 });
 
+// RESTApi for client
+Router.get("/api/users", (req, res) => {
+  Model.user.findAll("users").then((snapshot) => {
+    res
+      .writeHead(res.statusCode, {
+        Accept: "*",
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json",
+        "Content-Length": Buffer.byteLength(JSON.stringify(snapshot)),
+      })
+      .end(JSON.stringify(snapshot));
+  });
+});
+
 module.exports = Router;
