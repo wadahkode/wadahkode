@@ -425,7 +425,7 @@ Router.post("/admin/tutorial/update", (req, res) => {
 Router.post("/api/users/signin", (req, res) => {
   const { username, password } = req.body;
 
-  return model.user
+  return Model.user
     .findById("users", [username])
     .then((snapshot) => {
       if (snapshot < 1) {
@@ -471,30 +471,6 @@ Router.post("/api/users/signin", (req, res) => {
       }
     })
     .catch((error) => console.log(error));
-});
-
-Router.get("/api/users/:username", (req, res) => {
-  const { username } = req.body;
-
-  Model.user
-    .findById("users", [decodeURI(username), 0])
-    .then((snapshot) => {
-      if (snapshot.length < 1) {
-        res.end("Data tidak dapat ditemukan!");
-      } else {
-        res
-          .writeHead(res.statusCode, {
-            Accept: "*",
-            "Access-Control-Allow-Origin": "*",
-            "Content-Type": "application/json",
-            "Content-Length": Buffer.byteLength(JSON.stringify(snapshot)),
-          })
-          .end(JSON.stringify(snapshot));
-      }
-    })
-    .catch((error) => {
-      if (error) res.end("error");
-    });
 });
 
 module.exports = Router;
