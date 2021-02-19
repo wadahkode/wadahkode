@@ -425,52 +425,52 @@ Router.post("/admin/tutorial/update", (req, res) => {
 Router.post("/api/users/signin", (req, res) => {
   const { username, password } = req.body;
 
-  return Model.user
+  return model.user
     .findById("users", [username])
     .then((snapshot) => {
-      if (snapshot < 1) {
-        res.writeHead(203, {
-          Accept: "*/*",
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        });
-        res.write(
-          JSON.stringify({
-            error: true,
-            errorCode: 203,
-            message: "Akun tidak dapat ditemukan!",
-          })
-        );
-        res.end();
-      }
-
       for (let user of snapshot) {
-        if (!passwordHash.verify(password, JSON.parse(user.password))) {
-          res.writeHead(203, {
-            Accept: "*/*",
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-          });
-          res.write(
-            JSON.stringify({
-              error: true,
-              errorCode: 203,
-              message: "Kata sandi salah!",
+        if (passwordHash.verify(password, JSON.parse(user.password))) {
+          res
+            .writeHead(200, {
+              Accept: "*/*",
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*",
             })
-          );
-          res.end();
+            .end(JSON.stringify(snapshot));
         } else {
-          res.writeHead(200, {
-            Accept: "*/*",
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-          });
-          res.write(JSON.stringify(snapshot));
-          res.end();
+          res
+            .writeHead(203, {
+              Accept: "*/*",
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*",
+            })
+            .end(
+              JSON.stringify({
+                error: true,
+                errorCode: 203,
+                message: "Kata sandi salah.",
+              })
+            );
         }
       }
     })
-    .catch((error) => console.log(error));
+    .catch((error) => {
+      if (error) {
+        res
+          .writeHead(203, {
+            Accept: "*/*",
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          })
+          .end(
+            JSON.stringify({
+              error: true,
+              errorCode: 203,
+              message: "Akun tidak dapat ditemukan atau anda belum terdaftar!",
+            })
+          );
+      }
+    });
 });
 
 module.exports = Router;
