@@ -1,0 +1,92 @@
+@media only screen and (min-width: 240px) and (max-width: 320px) {
+  header > nav {
+    padding: 0.5rem 0;
+  }
+
+  header > nav > .container > .brand {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 460px) {
+  header > nav {
+    padding: 0.5rem 0;
+  }
+
+  header > nav > .container > .brand {
+    text-align: center;
+  }
+}
+
+/* primer mobile */
+@media only screen and (min-width: 461px) and (max-width: 640px) {
+  header > nav {
+    padding: 0.5rem 0;
+  }
+
+  header > nav > .container > .brand {
+    text-align: center;
+  }
+
+  main {
+    margin: 2rem 2rem;
+  }
+
+  main > .column {
+    display: grid;
+    grid-template-columns: auto;
+    /* flex-direction: column; */
+    gap: 1.5rem;
+  }
+
+  main > .column > .left,
+  main > .column > .right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  main > .column > .left > article,
+  main > .column > .right > article {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 3px 3px 4px rgba(153, 153, 153, 0.603);
+  }
+
+  footer {
+    background-color: white;
+    padding: 1rem 0;
+  }
+
+  footer > .container {
+    margin: 0 2rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 800px) {
+  header > nav {
+    padding: 0.6rem 0;
+  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1200px) {
+  header > nav {
+    padding: 0.75rem 0;
+  }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1600px) {
+  header > nav {
+    padding: 1rem 0;
+  }
+
+  main {
+    margin: 2rem 4rem 4rem 4rem;
+  }
+
+  main > .column {
+    grid-template-columns: 2fr 1fr auto;
+  }
+}
