@@ -16,6 +16,36 @@
   header > nav > .container > .brand {
     text-align: center;
   }
+
+  main {
+    margin: 2rem 1rem;
+  }
+
+  main > .column > .left article .article-header h2 {
+    font-size: 14pt;
+  }
+
+  main > .column > .right article .article-header h2 {
+    font-size: 12pt;
+  }
+
+  main > .column > .left article .article-header time,
+  main > .column > .right article .article-header time {
+    font-size: 10px;
+  }
+
+  main > .column > .left article picture,
+  main > .column > .right article picture {
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  main > .column > .left article picture img,
+  main > .column > .right article picture img {
+    max-width: 120px;
+    max-height: 120px;
+    object-fit: fill;
+  }
 }
 
 /* primer mobile */
@@ -74,6 +104,10 @@
 @media only screen and (min-width: 801px) and (max-width: 1200px) {
   header > nav {
     padding: 0.75rem 0;
+  }
+
+  main {
+    margin: 2rem 4rem 4rem 4rem;
   }
 }
 

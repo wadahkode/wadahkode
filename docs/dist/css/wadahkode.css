@@ -66,25 +66,53 @@ main > .column > .right article:hover {
   transition: 0.2s ease-in-out;
 }
 
-main > .column > .left article picture {
-  width: 144px;
-  height: 144px;
+main > .column > .left article picture,
+main > .column > .right article picture {
+  width: 160px;
+  height: 160px;
   background-color: rgba(0, 128, 0, 0.5);
 }
 
-main > .column > .left article picture img {
-  width: 144px;
-  height: 144px;
-  object-fit: cover;
+main > .column > .left article picture img,
+main > .column > .right article picture img {
+  width: 160px;
+  height: 160px;
+  object-fit: fill;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-main > .column > .left article .article-header {
+main > .column > .right article picture {
+  width: 128px;
+  height: 120px;
+}
+
+main > .column > .right article picture img {
+  width: 128px;
+  height: 120px;
+  object-fit: fill;
+  object-position: center;
+}
+
+main > .column > .right article .article-header h2 {
+  font-size: 14pt;
+}
+
+main > .column > .right article .article-header time {
+  font-size: 10px;
+}
+
+main > .column > .right article .article-header p {
+  font-size: 12px;
+}
+
+main > .column > .left article .article-header,
+main > .column > .right article .article-header {
   padding-top: 1rem;
 }
 
-main > .column > .left article .article-body {
+main > .column > .left article .article-body,
+main > .column > .right article .article-body {
   padding: 1rem 0;
 }
 
