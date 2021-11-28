@@ -13,9 +13,12 @@
 Dengan ini menyatakan bahwa semoga isi dari repositori saya dapat bermanfaat untuk anda,
 Jika anda membutuhkan bantuan saya silahkan hubungi kontak dibawah ini:
 
-- email    : ayus.sahabat@gmail.com (utama)
-             mvp.dedefilaras@gmail.com
-- whatsapp : https://wa.me/+628979320749
+- email    :
+    - ayus.sahabat@gmail.com (utama)
+    - mvp.dedefilaras@gmail.com
+
+- whatsapp :
+    - https://wa.me/+628979320749
 
 <!--
 **wadahkode/wadahkode** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
