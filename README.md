@@ -4,8 +4,18 @@
     <img src="https://komarev.com/ghpvc/?username=wadahkode&label=Profile%20views&color=0e75b6&style=flat"/>
 </p-->
 
-Saya hanya ingin bilang, semoga isi dari repositori saya dapat bermanfaat untuk anda.
-Salam koding, terus berkarya.
+- Nama            : Ayus Irfang Filaras
+- Pendidikan      : S2 (SD sampai SMP)
+- Kewarganegaraan : Indonesia
+- Lokasi          : Margasari, Tegal Jawa Tengah
+- Agama           : Islam
+
+Dengan ini menyatakan bahwa semoga isi dari repositori saya dapat bermanfaat untuk anda,
+Jika anda membutuhkan bantuan saya silahkan hubungi kontak dibawah ini:
+
+- email    : ayus.sahabat@gmail.com (utama)
+             mvp.dedefilaras@gmail.com
+- whatsapp : https://wa.me/08979320749
 
 <!--
 **wadahkode/wadahkode** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
