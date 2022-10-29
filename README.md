@@ -35,5 +35,9 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 <p>
-    <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=wadahkode&show_icons=true&locale=en&layout=compact "/>
+    <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=wadahkode&show_icons=true&locale=en&layout=compact" alt="" />
 </p>
+
+Noted :
+Saya sudah tidak lagi begitu aktif dalam dunia koding, Mohon maaf tapi ini sudah menjadi keputusan saya.
+Jika kawan-kawan membutuhkan bantuan saya, Silahkan hubungi saya melalui kontak diatas.
