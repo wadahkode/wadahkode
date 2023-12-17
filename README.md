@@ -16,13 +16,13 @@ Jika anda membutuhkan bantuan saya silahkan hubungi kontak dibawah ini:
 - email    :
     - ayus.sahabat@gmail.com (utama)
     - mvp.dedefilaras@gmail.com
-
+<!--
 - whatsapp :
     - https://wa.me/+628979320749
  
 - Instagram :
     - https://instagram.com/apolboxdev
-
+-->
 <!--
 **wadahkode/wadahkode** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
